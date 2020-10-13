@@ -1,5 +1,8 @@
 package top.redautu.mybatis.sqlsession;
 
+import top.redautu.cfj.Configuration;
+import top.redautu.mybatis.utils.XMLConfigBuilder;
+
 import java.io.InputStream;
 
 public class SqlSessionFactoryBuilder {
@@ -9,6 +12,7 @@ public class SqlSessionFactoryBuilder {
      * @return
      */
     public SqlSessionFactory build(InputStream configFile){
-        return null;
+        Configuration config = XMLConfigBuilder.loadConfiguration(configFile);
+        return new SqlSessionFactoryImpl(config);
     }
 }
