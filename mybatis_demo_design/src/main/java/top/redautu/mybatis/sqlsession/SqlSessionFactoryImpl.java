@@ -1,6 +1,6 @@
 package top.redautu.mybatis.sqlsession;
 
-import top.redautu.cfj.Configuration;
+import top.redautu.cfg.Configuration;
 
 /**
  * @Author: Wuk
@@ -15,6 +15,7 @@ public class SqlSessionFactoryImpl implements SqlSessionFactory{
     private Configuration config;
 
     public SqlSessionFactoryImpl(Configuration config){
+
         this.config = config;
     }
     /**
@@ -22,6 +23,7 @@ public class SqlSessionFactoryImpl implements SqlSessionFactory{
      * @return
      */
     public SqlSession openSession() {
+
         return new SqlSessionImpl(config);
     }
 }

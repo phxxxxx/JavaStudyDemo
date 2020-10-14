@@ -9,15 +9,12 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 //import top.redautu.mybatis.annotations.Select;
-import top.redautu.cfj.Configuration;
-import top.redautu.cfj.Mapper;
+import top.redautu.cfg.Configuration;
+import top.redautu.cfg.Mapper;
 import top.redautu.mybatis.io.Resources;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

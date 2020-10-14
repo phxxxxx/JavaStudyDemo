@@ -1,6 +1,10 @@
 package top.redautu.mybatis.sqlsession;
 
-import top.redautu.cfj.Configuration;
+import top.redautu.cfg.Configuration;
+import top.redautu.mybatis.sqlsession.proxy.MapperProxy;
+
+import java.lang.reflect.Proxy;
+import java.sql.Connection;
 
 /**
  * @Author: Wuk
@@ -12,9 +16,11 @@ import top.redautu.cfj.Configuration;
 public class SqlSessionImpl implements SqlSession {
 
     private Configuration cfg;
+    private Connection connection;
 
-    public SqlSessionImpl(Configuration cfg) {
+    public SqlSessionImpl(Configuration cfg,Connection connection) {
         this.cfg = cfg;
+        connection = DateSource
     }
 
     /**
@@ -24,6 +30,9 @@ public class SqlSessionImpl implements SqlSession {
      * @return
      */
     public <T> T getMapper(Class<T> daoInterfaceClass) {
+        Proxy.newProxyInstance(daoInterfaceClass.getClassLoader(),
+                new Class[]{daoInterfaceClass},new MapperProxy());
+
         return null;
     }
 

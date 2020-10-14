@@ -1,4 +1,4 @@
-package top.redautu.cfj;
+package top.redautu.cfg;
 
 /**
  * @Author: Wuk

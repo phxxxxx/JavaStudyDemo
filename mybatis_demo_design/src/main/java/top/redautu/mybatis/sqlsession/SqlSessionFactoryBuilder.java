@@ -1,6 +1,6 @@
 package top.redautu.mybatis.sqlsession;
 
-import top.redautu.cfj.Configuration;
+import top.redautu.cfg.Configuration;
 import top.redautu.mybatis.utils.XMLConfigBuilder;
 
 import java.io.InputStream;
