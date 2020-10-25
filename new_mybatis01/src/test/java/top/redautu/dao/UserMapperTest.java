@@ -1,6 +1,7 @@
 package top.redautu.dao;
 
 import org.apache.ibatis.session.SqlSession;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import top.redautu.pojo.User;
 import top.redautu.utils.MybatisUtils;
@@ -41,21 +42,30 @@ public class UserMapperTest {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
 
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user = new User(3,"wuk","234");
+        User user = new User(8,"hk","25374");
         mapper.addUser(user);
 
 
         sqlSession.commit();
         sqlSession.close();
     }
+    @Test
+    public void testLoger() {
 
+        final Logger logger = Logger.getLogger("TestErrOut");
+        logger.debug(" This is debug!!!");
+        logger.info(" This is info!!!");
+        logger.warn(" This is warn!!!");
+        logger.error(" This is error!!!");
+        logger.fatal(" This is fatal!!!");
+    }
 
     @Test
     public void updateUserTest(){
         SqlSession sqlSession = MybatisUtils.getSqlSession();
 
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user = new User(2,"jack","111");
+        User user = new User(19,"jak","111");
         mapper.updateUser(user);
 
 
@@ -69,7 +79,7 @@ public class UserMapperTest {
 
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 
-        mapper.deleteUser(1);
+        mapper.deleteUser(2);
 
 
         sqlSession.commit();
