@@ -65,7 +65,7 @@ public class UserMapperTest {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
 
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user = new User(19,"jak","111");
+        User user = new User(192,"jak","111");
         mapper.updateUser(user);
 
 
