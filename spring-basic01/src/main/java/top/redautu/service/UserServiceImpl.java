@@ -1,5 +1,6 @@
 package top.redautu.service;
 
+import org.springframework.stereotype.Component;
 import top.redautu.dao.UserDao;
 import top.redautu.dao.UserDaoImpl;
 import top.redautu.dao.UserDaoMysqlImpl;
@@ -11,17 +12,23 @@ import top.redautu.dao.UserDaoMysqlImpl;
  * @date: 2020/10/27.
  * @description:
  */
-
+@Component
 public class UserServiceImpl implements UserService{
 
-    //private UserDao userDao = new UserDaoImpl();
-    private UserDao userDao;
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
+
+    public void add() {
+        System.out.println("增加了一个用户");
     }
 
-    public void getInfo() {
-        userDao.select();
+    public void delete() {
+        System.out.println("删除了一个用户");
     }
 
-   }
+    public void change() {
+        System.out.println("更改了一个用户");
+    }
+
+    public void query() {
+        System.out.println("查询了一个用户");
+    }
+}

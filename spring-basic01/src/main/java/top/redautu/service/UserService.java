@@ -8,5 +8,9 @@ package top.redautu.service;
  */
 
 public interface UserService {
-    void getInfo();
+        void add();
+        void delete();
+        void change();
+        void query();
+
 }
