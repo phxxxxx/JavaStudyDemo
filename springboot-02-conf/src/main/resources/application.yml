@@ -1,0 +1,14 @@
+#server:
+#  port: 8090
+#
+#User:
+#  name: wubaiu
+#  boss: true
+#  map: {K1: V1,K2: V2}
+#  list:
+#    -zhagn
+#    -阳
+#  dog:
+#    name: tegn
+#    age: 2
+#  age: 43
