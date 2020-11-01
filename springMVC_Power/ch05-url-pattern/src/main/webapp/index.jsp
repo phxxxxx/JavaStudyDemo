@@ -8,15 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>提交参数给controller</title>
-</head>
+    <title>提交参数给controller 1</title>
+ </head>
 <body>
-<p>received param</p>
-<form action="recevice.do">
+<p>处理器方法返回string表示视图名称</p>
+<form action="some.do">
     姓名<input type="text" name="name"><br/>
     年龄<input type="text" name="age"><br/>
     <input type="submit" name="提交参数">
+
 </form>
+<form action="/WEB-INF/html/source.html">
+    <input type="submit" name="静态资源">
+</form>
+ 
 
 
 

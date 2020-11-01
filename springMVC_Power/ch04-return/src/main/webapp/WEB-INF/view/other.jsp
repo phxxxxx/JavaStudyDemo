@@ -11,10 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<h3>show.jsp从request作用于获得数据</h3><br>
-<h3>msg 的数据为: ${myname}</h3>
-<h3>like 的数据为: ${myage}</h3>
-<h3>user 的数据为: ${myStudent}</h3>
+<h3>other.jsp从request作用于获得数据</h3><br>
+<h3>msg 的数据为: ${msg}</h3>
+<h3>hate 的数据为: ${hate}</h3>
 
 </body>
 </html>

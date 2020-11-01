@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import top.redautu.pojo.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,6 +32,21 @@ public class MyController {
         mv.addObject("myage",age);
 
        // mv.setViewName("/WEB-INF/view/show.jsp");
+        //自送使用视图解析器的前后缀连接
+        mv.setViewName("show");
+        return mv;
+    }
+
+    //用对象做形参传递参数
+    @RequestMapping(value = "/receviceObject.do")
+    public ModelAndView doObject(User user){
+        ModelAndView mv = new ModelAndView();
+
+        mv.addObject("myname",user.getName());
+        mv.addObject("myage",user.getAge());
+        mv.addObject("myStudent",user);
+
+        // mv.setViewName("/WEB-INF/view/show.jsp");
         //自送使用视图解析器的前后缀连接
         mv.setViewName("show");
         return mv;

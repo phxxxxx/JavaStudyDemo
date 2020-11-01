@@ -12,8 +12,9 @@
 </head>
 <body>
 <h3>show.jsp从request作用于获得数据</h3><br>
-<h3>msg 的数据为: ${myname}</h3>
-<h3>like 的数据为: ${myage}</h3>
+<h3>name 的数据为: ${name}</h3>
+<h3>age 的数据为: ${age}</h3>
+
 
 </body>
 </html>
