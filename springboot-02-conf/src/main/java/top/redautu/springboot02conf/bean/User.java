@@ -1,6 +1,9 @@
 package top.redautu.springboot02conf.bean;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import javax.xml.crypto.Data;
@@ -20,9 +23,12 @@ import java.util.Map;
  * @ConfigurationProperties告诉springboot将本类中所有属性和配置文件中指定的相绑定
  * 	prefix = "user" 选择一个属性进行一一映射
  */
+@PropertySource(value = {"classpath:user.properties"})
 @Component
 @ConfigurationProperties(prefix = "user")
 public class User {
+
+	@Value("${user.name}")
 	private String name;
 	private boolean boss;
 	private int age;
