@@ -28,8 +28,8 @@ import java.util.Map;
 @ConfigurationProperties(prefix = "user")
 public class User {
 
-	@Value("${user.name}")
 	private String name;
+	private String add;
 	private boolean boss;
 	private int age;
 	private Data birth;
@@ -42,8 +42,10 @@ public class User {
 	public String toString() {
 		return "User{" +
 				"name='" + name + '\'' +
+				", add='" + add + '\'' +
 				", boss=" + boss +
 				", age=" + age +
+				", birth=" + birth +
 				", map=" + map +
 				", list=" + list +
 				", dog=" + dog +
@@ -56,6 +58,14 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getAdd() {
+		return add;
+	}
+
+	public void setAdd(String add) {
+		this.add = add;
 	}
 
 	public boolean isBoss() {
