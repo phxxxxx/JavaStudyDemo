@@ -24,6 +24,6 @@ public class HelloWorld {
 	@RequestMapping("/success")
 	public String success(Map<String,Object> map){
 		map.put("school","JLU");
-		return "success";
+		return "successaa";
 	}
 }
